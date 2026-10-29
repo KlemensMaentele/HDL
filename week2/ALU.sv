@@ -17,6 +17,7 @@ import Types::*;
 module ALU (
     output logic [7:0] Result,
     output logic Equal,
+    input logic clk,
     input logic [3:0] Op1,
     input logic [3:0] Op2,
     input sel_t Sel,
@@ -27,7 +28,7 @@ module ALU (
   timeunit 1ns; timeprecision 100ps;
 
 // your code goes here
-  always_comb
+  always_ff(@posedge clk)
   begin
     case(Sel)
     ADD: if(Mode == WITH_CARRY)
