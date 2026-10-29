@@ -1,0 +1,10 @@
+  "verilog.linting.linter": "xvlog",
+  "files.associations": {
+    "*.sv": "systemverilog",
+    "*.svh": "systemverilog"
+  },
+  "files.watcherExclude": {
+    "**/build/**": true,
+    "**/xsim.dir/**": true
+  }
+}
